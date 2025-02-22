@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Color */
+:root {
+  /* Primary */
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(157, 42%, 18%);
+
+  /* Neutral */
+  --black: hsl(121, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+p {
+  font-size: 14px;
+}
+
+.container {
+  width: 90%;
+  margin: 28px auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image1 {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.image2 {
+  display: none;
+}
+
+.wrapper {
+  background-color: var(--white);
+  padding: 28px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.category {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--grey);
+  letter-spacing: 4px;
+}
+
+.title {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 16px 0;
+}
+
+.description {
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.price {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--green-500);
+}
+
+.promo {
+  text-decoration: line-through;
+  color: var(--grey);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--green-500);
+  border: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--green-700);
+}
+
+.cart-icon {
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 580px;
+    border-radius: 8px;
+    margin: 96px auto;
+  }
+
+  .image1 {
+    display: none;
+  }
+
+  .image2 {
+    display: block;
+    width: 50%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .wrapper {
+    width: 50%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .promo {
+    font-size: 0.7rem;
+  }
+}
